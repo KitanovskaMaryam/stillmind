@@ -1,0 +1,279 @@
+:root{
+    --dark-cyan:#0D7373;
+    --light-cyan:#00a79d;
+    --apricot:#f4a985;
+    --light-apricot:#ebbd90;
+    --blue:#18314F;
+    --font-main:'Josefin Sans', sans-serif;
+    --font-heading:'DM Serif Display', serif;
+}
+body,
+html{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+/* ELEMENTS */
+.link-white{
+    color: #fff;
+    font-family: var(--font-main);
+    font-weight: 400;
+}
+.link-white:hover{
+    color: #fff;
+    text-decoration: none;
+}
+.link-blue{
+    color: var(--blue);
+    font-family: var(--font-main);
+    font-weight: 400;
+}
+.link-blue:hover{
+    color: #364d69;
+    text-decoration: none;
+}
+.green-button{
+    background-color: var(--light-cyan);
+    padding: 14px 26px;
+    border-radius: 8px;
+    transition: ease-out 0.5s;
+    max-width: 200px;
+    max-height: 50px;
+}
+.green-button:hover{
+    background-color: var(--dark-cyan);
+    transition: ease-in 0.5s;
+}
+.fa, .fab, .fal, .far, .fas{
+    color: var(--blue);
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 10px 20px;
+}
+.font-headings{
+    color: var(--blue);
+    font-family: var(--font-heading);
+    text-rendering: geometricPrecision;
+}
+.font-paragraph{
+    color: var(--blue);
+    font-family: var(--font-main);
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-rendering: geometricPrecision;
+}
+.font-headings-white{
+    color: #ffffff;
+    font-family: var(--font-main);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-rendering: geometricPrecision;
+}
+.font-paragraph-white{
+    color: #ffffff;
+    font-family: var(--font-main);
+    font-size: 1.2rem;
+    font-weight: 200;
+    text-rendering: geometricPrecision;
+}
+/* ELEMENTS */
+/***************************************** HEADER *********************************************/
+header {
+          position: relative;
+          width: 100%;
+          height: 92vh;
+          text-align: center;
+          background: url(../images/header-imgs.png) center / cover;
+}
+
+/* on scroll menu show */
+.topMenu {
+          position: fixed;
+          top: 0;
+          color: #000;
+          width: 100%;
+          height: 200px;
+          background: #fff;
+          z-index: 20;
+          box-shadow: 0 0 20px 3px rgb(0 0 0 / 15%);
+          display: none;
+}
+.hide {
+          opacity:0;     
+          transform: translateY(-100%); 
+          transition: 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.show {
+          opacity:1;
+          transition: 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+      }
+/* Side Menu */
+#slide {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    display: none;
+}
+.mobile-nav-top{
+    z-index: 20;
+}
+.on-scroll-logo{
+    max-width: 430px;
+}
+#clicky{
+    cursor: pointer;
+}
+/****************************************** HEADER ************************************************/
+
+/* TESTIMONIALS */
+.carousel-indicators > li{
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--apricot);
+    background-color: #fff;
+}
+.carousel-indicators > .active{
+    background-color: var(--light-apricot);
+}
+.carousel-item p{
+    text-align: center;
+    font-family: var(--font-main);
+    color: var(--blue); 
+}
+.fa-angle-down{
+    padding: 11px 15px;
+    border: 1px solid var(--apricot);
+    border-radius: 50%;
+    color: var(--light-apricot);
+}
+.fa-angle-down:before{
+    border: none;
+}
+/* TESTIMONIALS */
+/* TEXT AND IMAGE WRAP */
+.img-mask-wrapper{
+    -webkit-mask-image: url(../images/image-mask.svg);
+    mask-image: url(../images/image-mask.svg);
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+}
+
+/* TEXT AND IMAGE WRAP */
+
+/* LIST BENEFITS */
+.wave-wrapper{
+    -webkit-mask-image: url(../images/wave-mask-01.svg);
+    mask-image: url(../images/wave-mask-01.svg);
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: #18314F;
+}
+.img-list-benefits{
+    background-image: url("../images/ave-calvar-opxOfzge2Tg-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    height: 0;
+    padding-top: 30%!important;
+}
+.bullet-list > li { list-style-image: url("../images/bullet-list.svg");}
+.bullet-list > li::marker{width:7px; }
+/* LIST BENEFITS */
+
+/* BACKGROUND DIFFERENET */
+.horizontal-line {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap; 
+}
+.horizontal-line > span {
+    position: relative;
+    display: inline-block;
+}
+.horizontal-line > span:before,
+.horizontal-line > span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 1px;
+    background: var(--apricot);
+}
+.horizontal-line > span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+.horizontal-line > span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+.apricot-icon{
+    max-width: 160px;
+}
+/* BACKGROUND DIFFERENET */
+/* Background PNG */
+.background-png{
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-weight: 200;
+}
+/* Background PNG */
+/* BEFORE FOOTER LOGOS */
+.background-png{
+    background-image: url("../images/bg-image.png");
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+/* BEFORE FOOTER LOGOS */
+/* FOOTER */
+.footer{
+    background-image: url("../images/footer.png");
+    background-position-x: center;
+    background-size: cover;
+}
+.img-footer{
+    max-width: 300px;
+}
+.fa-facebook-f,
+.fa-instagram{
+    color: #fff;
+}
+/* FOOTER */
+@media screen and (max-width: 1510px){
+    .img-list-benefits{
+        padding-top: 40%!important;
+    }
+}
+@media screen and (max-width: 1252px){
+    .img-list-benefits{
+        padding-top: 50%!important;
+    }
+}
+@media screen and (max-width: 948px){
+    .img-list-benefits{
+        padding-top: 67%!important;
+    }
+}
+@media screen and (max-width: 768px){
+    .img-list-benefits{
+            background-image: url("../images/ave-calvar-opxOfzge2Tg-unsplash.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: top;
+            height: 0;
+            padding-bottom: 10%!important;
+    }
+}
